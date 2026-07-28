@@ -1,3 +1,5 @@
+
+```text
 interview-practice-assistant/
 │
 ├── backend/
@@ -158,3 +160,5 @@ interview-practice-assistant/
 │   ├── package.json                   # Frontend dependencies
 │   ├── tsconfig.json                  # TypeScript configuration
 │   └── README.md                      # Frontend README
+
+```

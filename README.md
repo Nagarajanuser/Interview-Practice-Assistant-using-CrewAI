@@ -15,13 +15,11 @@
 
 The **AI Interview Practice Assistant** is a production-grade, enterprise-ready multi-agent platform designed to automate, standardize, and scale technical interview candidate evaluations and practice simulations. Powered by **CrewAI**, **FastAPI**, **MySQL**, and **Angular**, the platform simulates real-world engineering interview rounds with granular role customization, strict domain boundary enforcement, automated benchmark answer generation, and objective AI evaluation.
 
-### 🌟 Business Value & Recruiter Appeal (HR Perspective)
-* **Standardized Candidate Screening**: Eliminates interviewer bias by evaluating candidate answers against objective, AI-generated benchmark rubrics mapped to explicit experience levels (Beginner, Intermediate, Advanced).
-* **Massive Cost & Time Savings**: Reduces technical screening overhead by up to **80%**, allowing talent acquisition teams to shortlist top engineering talent before live interviews.
+### 🌟 Key Highlights
+* **Standardized Candidate Screening**: Eliminates bias by evaluating candidate answers against objective, AI-generated benchmark rubrics mapped to explicit experience levels (Beginner, Intermediate, Advanced).
 * **Instant Actionable Feedback**: Provides candidates with immediate point-by-point feedback, score breakdown per topic, and targeted skill gap analysis.
 * **Domain Matrix Governance**: Prevents out-of-scope questions by using dynamic role configurations (`roles.json`), ensuring mandatory skills (e.g., FastAPI, RAG, CrewAI) are tested while excluding irrelevant topics (e.g., CNN, Computer Vision).
 
-### 🛠️ Architecture & Technical Depth (Engineering Lead Perspective)
 * **Collaborative Multi-Agent Architecture**: Leverages CrewAI agents operating in sequential pipeline graph topologies with distinct roles (Planner, Question Generator, Answer Specialist, QA Reviewer, Evaluator).
 * **Guaranteed Schema Integrity & Pydantic Guardrails**: Enforces structured JSON outputs at agent boundaries using Pydantic schemas, eliminating LLM hallucinations and malformed responses.
 * **Hybrid LLM Provider Switcher**: Features an abstraction layer (`llm_factory.py`) supporting both cloud models (**OpenAI GPT-4o / GPT-4o-mini**) and local privacy-preserving LLMs (**Ollama Llama 3 / Mistral**).
@@ -370,7 +368,7 @@ ng serve --open
 
 ---
 
-## 🎯 Key Highlights for HR & Technical Interviewers
+## 🎯 Key Highlights for Technical 
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────┐

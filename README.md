@@ -1,0 +1,2 @@
+
+AI Interview Practice Assistant using CrewAI is a production-ready multi-agent Generative AI application built with FastAPI, CrewAI, Ollama, and MySQL that automates technical interview generation, candidate evaluation, AI-based scoring, and personalized feedback through specialized AI agents for planning, question generation, answer creation, quality assurance, and interview assessment.

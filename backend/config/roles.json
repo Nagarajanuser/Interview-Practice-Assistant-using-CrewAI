@@ -1,0 +1,94 @@
+{
+    "roles": [
+        {
+            "id": "ai_engineer",
+            "display_name": "AI Engineer",
+            "category": "Artificial Intelligence",
+            "experience_levels": ["Beginner", "Intermediate", "Advanced"],
+            "mandatory_skills": [
+                "Python", "FastAPI", "REST APIs", "LLMs", "Prompt Engineering",
+                "LangChain", "LangGraph", "RAG", "Embeddings", "Vector Databases",
+                "Pinecone", "Semantic Search", "Hybrid Search", "Reranking",
+                "CrewAI", "Agentic AI", "Docker", "Git", "Redis", "System Design"
+            ],
+            "optional_skills": [
+                "FAISS", "ChromaDB", "OpenAI API", "Ollama", "LangSmith",
+                "MCP", "Guardrails", "Evaluation Frameworks", "Caching",
+                "Memory", "Structured Output", "Tool Calling"
+            ],
+            "excluded_topics": [
+                "CNN", "RNN", "Image Segmentation", "Object Detection",
+                "GAN", "OpenCV", "YOLO", "TensorFlow Image Models"
+            ]
+        },
+        {
+            "id": "machine_learning_engineer",
+            "display_name": "Machine Learning Engineer",
+            "category": "Artificial Intelligence",
+            "experience_levels": ["Beginner", "Intermediate", "Advanced"],
+            "mandatory_skills": [
+                "Python", "FastAPI", "REST APIs", "LLMs", "Prompt Engineering",
+                "LangChain", "LangGraph", "RAG", "Embeddings", "Vector Databases",
+                "Pinecone", "Semantic Search", "Hybrid Search", "Reranking",
+                "CrewAI", "Agentic AI", "Docker", "Git", "Redis", "System Design"
+            ],
+            "optional_skills": [
+                "FAISS", "ChromaDB", "OpenAI API", "Ollama", "LangSmith",
+                "MCP", "Guardrails", "Evaluation Frameworks", "Caching",
+                "Memory", "Structured Output", "Tool Calling"
+            ],
+            "excluded_topics": [
+                "CNN", "RNN", "Image Segmentation", "Object Detection",
+                "GAN", "OpenCV", "YOLO", "TensorFlow Image Models"
+            ]
+        },
+        {
+            "id": "python_developer",
+            "display_name": "Python Developer",
+            "category": "Engineering",
+            "experience_levels": ["Beginner", "Intermediate", "Advanced"],
+            "mandatory_skills": [
+                "Python", "FastAPI", "REST APIs", "Docker", "Git", "SQL", "System Design"
+            ],
+            "optional_skills": [
+                "Redis", "LangChain", "LLMs", "Prompt Engineering",
+                "Microservices", "CI/CD", "Test-Driven Development"
+            ],
+            "excluded_topics": [
+                "CNN", "Image Segmentation", "Computer Vision"
+            ]
+        },
+        {
+            "id": "python_backend_developer",
+            "display_name": "Python Backend Developer",
+            "category": "Engineering",
+            "experience_levels": ["Beginner", "Intermediate", "Advanced"],
+            "mandatory_skills": [
+                "Python", "FastAPI", "REST APIs", "Docker", "Git", "SQL", "System Design"
+            ],
+            "optional_skills": [
+                "Redis", "LangChain", "LLMs", "Prompt Engineering",
+                "Microservices", "CI/CD", "Test-Driven Development"
+            ],
+            "excluded_topics": [
+                "CNN", "Image Segmentation", "Computer Vision"
+            ]
+        },
+        {
+            "id": "software_engineer",
+            "display_name": "Software Engineer",
+            "category": "Engineering",
+            "experience_levels": ["Beginner", "Intermediate", "Advanced"],
+            "mandatory_skills": [
+                "Python", "FastAPI", "REST APIs", "Docker", "Git", "SQL", "System Design"
+            ],
+            "optional_skills": [
+                "Redis", "LangChain", "LLMs", "Prompt Engineering",
+                "Microservices", "CI/CD", "Test-Driven Development"
+            ],
+            "excluded_topics": [
+                "CNN", "Image Segmentation", "Computer Vision"
+            ]
+        }
+    ]
+}

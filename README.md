@@ -389,3 +389,138 @@ ng serve --open
 ```
 
 
+# CrewAI Multi Agent Flow
+```text
+                  Planner Agent
+                        |
+          -------------------------------
+          |                             |
+          V                             V
+ Question Generator              Answer Generator
+          |                             |
+          -----------Review--------------
+                        |
+                   QA Agent
+                        |
+                  MySQL Storage
+
+
+Planner Agent
+        │
+        │
+        ▼
+Planner Blueprint
+        │
+        ▼
+Question Agent
+        │
+        │  ✓ Mandatory Skills
+        │  ✓ Excluded Skills
+        ▼
+Interview Questions
+        │
+        ▼
+Answer Agent
+        │
+        ▼
+Questions + Answers
+        │
+        ▼
+QA Agent
+        │
+        ├── ✓ Mandatory Skills Covered
+        ├── ✓ No Excluded Skills
+        ├── ✓ No Duplicate Questions
+        ├── ✓ Correct Difficulty
+        ├── ✓ Correct Experience Level
+        ├── ✓ Sequential Numbering
+        ├── ✓ Exactly N Questions
+        ├── ✓ Valid Answers
+        └── ✓ InterviewPlanOutput Schema
+        │
+        ▼
+Final Output
+```
+
+
+# Production Architecture
+                         +----------------------------+
+                         |        roles.json          |
+                         |----------------------------|
+                         | Mandatory Skills           |
+                         | Optional Skills            |
+                         | Excluded Skills            |
+                         +-------------+--------------+
+                                       |
+                                       |
+                                       v
+                     +----------------------------------+
+                     | Load Role Configuration          |
+                     +---------------+------------------+
+                                     |
+                                     |
+                                     v
+          +------------------------------------------------+
+          | 1. Planner Agent                               |
+          | Interview Curriculum Planner                   |
+          |------------------------------------------------|
+          | • Read Role Configuration                      |
+          | • Generate Interview Blueprint                 |
+          | • Cover Mandatory Skills                       |
+          | • Ignore Excluded Skills                       |
+          +----------------+-------------------------------+
+                           |
+                           | Blueprint
+                           v
+          +------------------------------------------------+
+          | 2. Question Agent                              |
+          | Technical Question Creator                     |
+          |------------------------------------------------|
+          | • Read Blueprint                              |
+          | • Generate Questions                          |
+          | • Match Experience                            |
+          | • Match Difficulty                            |
+          +----------------+-------------------------------+
+                           |
+                           | Questions
+                           v
+          +------------------------------------------------+
+          | 3. Answer Agent                                |
+          | Subject Matter Answer Specialist               |
+          |------------------------------------------------|
+          | • Read Questions                              |
+          | • Generate Ideal Answers                      |
+          | • Explain Best Practices                      |
+          +----------------+-------------------------------+
+                           |
+                           | Questions + Answers
+                           v
+          +------------------------------------------------+
+          | 4. QA Agent                                    |
+          | Interview QA & Quality Reviewer                |
+          |------------------------------------------------|
+          | ✓ Validate Mandatory Skills Covered           |
+          | ✓ Validate No Excluded Skills Used            |
+          | ✓ Remove Duplicate Questions                  |
+          | ✓ Remove Overlapping Questions                |
+          | ✓ Verify Experience Level                     |
+          | ✓ Verify Difficulty                           |
+          | ✓ Verify Question Numbering                   |
+          | ✓ Verify Total Question Count                 |
+          | ✓ Verify InterviewPlanOutput Schema           |
+          +----------------+-------------------------------+
+                           |
+                           |
+                           v
+          +-----------------------------------------------+
+          | InterviewPlanOutput (Pydantic)                |
+          +----------------+------------------------------+
+                           |
+                 +---------+---------+
+                 |                   |
+                 v                   v
+        +----------------+   +----------------------+
+        | Save to MySQL  |   | Return FastAPI JSON  |
+        +----------------+   +----------------------+
+
+

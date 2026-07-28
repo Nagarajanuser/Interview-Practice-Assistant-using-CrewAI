@@ -45,6 +45,7 @@ uvicorn main:app --reload
 
 
 # CrewAI Multi Agent Flow
+```text
                   Planner Agent
                         |
           -------------------------------
@@ -94,7 +95,7 @@ QA Agent
         │
         ▼
 Final Output
-
+```
 
 
 # Production Architecture
